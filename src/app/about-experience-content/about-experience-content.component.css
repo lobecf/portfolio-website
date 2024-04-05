@@ -1,0 +1,22 @@
+.company {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.title-wrapper {
+    display:inline-block
+}
+
+.sub-title {
+    float: left;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 30px;
+    margin-bottom: 8px
+}
+
+.list {
+    margin-top: 0;
+    margin-bottom: 30px;
+}

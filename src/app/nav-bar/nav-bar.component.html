@@ -1,0 +1,18 @@
+<div class="nav-bar-wrapper" [ngClass]="{ 'dark-mode': darkModeService.darkModeEnabled }">
+    <h3 class="link" [ngClass]="{ 'selected': sharedService.selectedComponent === 'intro' || sharedService.selectedComponent === 'about' || sharedService.selectedComponent === 'skillsets' || sharedService.selectedComponent === 'experience' || sharedService.selectedComponent === 'education'}" (click)="showContent('intro')">ABOUT</h3>
+    <div class="about-wrapper">
+    <p class="link-subject" [ngClass]="{ 'selected-link': sharedService.selectedComponent === 'intro' }" (click)="showContent('intro')">intro</p>
+    <p class="link-subject" [ngClass]="{ 'selected-link': sharedService.selectedComponent === 'skillsets' }" (click)="showContent('skillsets')">skillsets</p>
+    <p class="link-subject" [ngClass]="{ 'selected-link': sharedService.selectedComponent === 'experience' }" (click)="showContent('experience')">experience</p>
+    <p class="link-subject" [ngClass]="{ 'selected-link': sharedService.selectedComponent === 'education' }" (click)="showContent('education')">education</p>
+    </div>
+    <h3 class="link" [ngClass]="{ 'selected': sharedService.selectedComponent === 'project1' || sharedService.selectedComponent === 'projects' || sharedService.selectedComponent === 'project2' || sharedService.selectedComponent === 'project3'}" (click)="showContent('project1')">PROJECTS</h3>
+    <div class="about-wrapper">
+    <p class="link-subject" [ngClass]="{ 'selected-link': sharedService.selectedComponent === 'project1' }" (click)="showContent('project1')">tabata app</p>
+    <p class="link-subject" [ngClass]="{ 'selected-link': sharedService.selectedComponent === 'project2' }" (click)="showContent('project2')">robot friend</p>
+    <p class="link-subject" [ngClass]="{ 'selected-link': sharedService.selectedComponent === 'project3' }" (click)="showContent('project3')">eventful</p>
+    </div>
+    <h3 class="link" [ngClass]="{ 'selected': sharedService.selectedComponent === 'resume' }" (click)="showContent('resume')">RESUME</h3>
+    <h3 class="link" [ngClass]="{ 'selected': sharedService.selectedComponent === 'contact' }" (click)="showContent('contact')">CONTACT</h3>
+    </div>
+

@@ -1,0 +1,42 @@
+<div class="toggle-button-wrapper">
+    <label class="switch">
+        <input type="checkbox" (change)="darkMode()">
+        <span class="slider round"></span>
+      </label>
+</div>
+<div class="content-wrapper">
+    <ng-container *ngIf="sharedService.selectedComponent === 'about'">
+    <app-about-content></app-about-content>
+    </ng-container>
+    <ng-container *ngIf="sharedService.selectedComponent === 'intro'">
+        <app-about-intro-content></app-about-intro-content>
+    </ng-container>
+    <ng-container *ngIf="sharedService.selectedComponent === 'skillsets'">
+        <app-about-skillsets-content></app-about-skillsets-content>
+    </ng-container>
+    <ng-container *ngIf="sharedService.selectedComponent === 'experience'">
+        <app-about-experience-content></app-about-experience-content>
+    </ng-container>
+    <ng-container *ngIf="sharedService.selectedComponent === 'education'">
+        <app-about-education-content></app-about-education-content>
+    </ng-container>
+    <ng-container *ngIf="sharedService.selectedComponent === 'projects'">
+        <app-projects-content></app-projects-content>
+    </ng-container>
+    <ng-container *ngIf="sharedService.selectedComponent === 'project1'">
+        <app-project-project1-content></app-project-project1-content>
+    </ng-container>
+    <ng-container *ngIf="sharedService.selectedComponent === 'project2'">
+        <app-project-project2-content></app-project-project2-content>
+    </ng-container>
+    <ng-container *ngIf="sharedService.selectedComponent === 'project3'">
+        <app-project-project3-content></app-project-project3-content>
+     </ng-container>
+    <ng-container *ngIf="sharedService.selectedComponent === 'resume'">
+    <app-resume-content></app-resume-content>
+    </ng-container>
+    <ng-container *ngIf="sharedService.selectedComponent === 'contact'">
+    <app-contact-content></app-contact-content>
+    </ng-container>
+    </div>
+

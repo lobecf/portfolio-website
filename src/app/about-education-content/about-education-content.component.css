@@ -1,0 +1,14 @@
+.header {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.degree {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.wrapper {
+    margin-bottom: 30px;
+}

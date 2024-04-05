@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    justify-content: center;
+    }
+    
+    :root {
+        --background-light: #ffffff;
+        --text-light: #333333;
+        --background-dark: #333333;
+        --text-dark: #ffffff;
+        }
+        /* Dark Mode Styles */
+body {
+    background-color: var(--background-light);
+    color: var(--text-light);
+    transition: background-color 0.3s, color 0.3s;
+    }
+    
+    body.dark-mode {
+    background-color: var(--background-dark);
+    color: var(--text-dark);
+    }
+    
+    /* Dark Mode Toggle Slider Styles */
+    .switch input:checked + .slider {
+    background-color: #333333; /* Change slider color in dark mode */
+    }
+    
+    .switch input:checked + .slider:before {
+    background-color: #ffffff; /* Change slider handle color in dark mode */
+    }
