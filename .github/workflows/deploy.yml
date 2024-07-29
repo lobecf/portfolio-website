@@ -1,31 +1,31 @@
 name: Deploy Angular App to GitHub Pages
 
 on:
-push:
-branches:
-- main # Change this if your main branch has a different name
+  push:
+    branches:
+      - main 
 
 jobs:
-deploy:
-runs-on: ubuntu-latest
+  deploy:
+    runs-on: ubuntu-latest
 
-steps:
-- name: Checkout code
-uses: actions/checkout@v2
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-- name: Install Node.js
-uses: actions/setup-node@v2
-with:
-node-version: '16' # Use the latest LTS version
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16' # Use the latest LTS version
 
-- name: Install dependencies
-run: npm install
+      - name: Install dependencies
+        run: npm install
 
-- name: Build the Angular app
-run: npm run build -- --configuration production --base-href /portfolio-website/
+      - name: Build the Angular app
+        run: npm run build -- --configuration production --base-href /portfolio-website/
 
-- name: Deploy to GitHub Pages
-uses: peaceiris/actions-gh-pages@v3
-with:
-github_token: ${{ secrets.GITHUB_TOKEN }}
-publish_dir: ./dist/website
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist/website
