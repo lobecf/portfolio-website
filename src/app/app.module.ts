@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +21,10 @@ import { ProjectProject2ContentComponent } from './project-project2-content/proj
 import { ProjectProject3ContentComponent } from './project-project3-content/project-project3-content.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { ImageModalComponent } from './image-modal/image-modal.component';
+import { ToastrModule } from 'ngx-toastr';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
 
 @NgModule({
   declarations: [
@@ -41,7 +47,12 @@ import { ImageModalComponent } from './image-modal/image-modal.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ToastrModule.forRoot(),
+    ReactiveFormsModule,
+    HttpClientModule,
+PdfViewerModule,
+NgxExtendedPdfViewerModule
   ],
   providers: [
     provideAnimationsAsync()
