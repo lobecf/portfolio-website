@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { Router } from '@angular/router'; // Import Router
 import { DarkModeService } from "../dark-mode.service";
 import { SharedService } from "../shared.service";
 
@@ -20,16 +21,21 @@ export class ContentComponent {
     'contact'
   ];
 
-  constructor(public sharedService: SharedService, public darkModeService: DarkModeService) {}
+  constructor(
+    public sharedService: SharedService, 
+    public darkModeService: DarkModeService,
+    private router: Router // Inject Router
+  ) {}
 
   navigateTo(direction: 'next' | 'prev') {
     const currentIndex = this.contentOrder.indexOf(this.sharedService.selectedComponent);
-    if (direction === 'next') {
-      const nextIndex = Math.min(currentIndex + 1, this.contentOrder.length - 1);
-      this.sharedService.selectedComponent = this.contentOrder[nextIndex];
-    } else if (direction === 'prev') {
-      const prevIndex = Math.max(currentIndex - 1, 0);
-      this.sharedService.selectedComponent = this.contentOrder[prevIndex];
+    
+    if (direction === 'next' && currentIndex < this.contentOrder.length - 1) {
+      this.sharedService.selectedComponent = this.contentOrder[currentIndex + 1];
+      this.router.navigate([this.sharedService.selectedComponent]); // Navigate to the next route
+    } else if (direction === 'prev' && currentIndex > 0) {
+      this.sharedService.selectedComponent = this.contentOrder[currentIndex - 1];
+      this.router.navigate([this.sharedService.selectedComponent]); // Navigate to the previous route
     }
   }
 

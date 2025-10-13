@@ -18,8 +18,20 @@ export class WelcomeComponent implements OnInit {
     this.rotateTitles();
   }
 
-  enter() {
-    this.router.navigate(['/content']);
+  intro() {
+    this.router.navigate(['/intro']);
+  }
+
+  projects() {
+    this.router.navigate(['/project1']);
+  }
+
+  resume() {
+    this.router.navigate(['/resume']);
+  }
+
+  contact() {
+    this.router.navigate(['/contact']);
   }
 
   rotateTitles() {
