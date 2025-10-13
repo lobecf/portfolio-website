@@ -1,0 +1,37 @@
+<div class="welcome-container">
+  <div class="left-container">
+    <div class="intro">
+      <h2>Hi, I'm</h2>
+      <h1 class="name">CHARLIE LOBE</h1>
+      <h2 class="rotating-text">{{ currentTitle }}</h2>
+      <h2 class="description">Technology professional with expertise in Java, Terraform, Typescript, and CSS</h2>
+    </div>
+    <div class="nav-buttons">
+      <button (click)="enter()">About</button>
+      <button (click)="enter()">Projects</button>
+      <button (click)="enter()">Resume</button>
+      <button (click)="enter()">Contact</button>
+    </div>
+  </div>
+  <div class="image-container">
+    <img src="assets/IMG_4220.jpg">
+    <div class="links" [ngClass]="{ 'dark-mode': darkModeService.darkModeEnabled }">
+      <a href="https://github.com/lobecf" target="_blank" class="link">
+          <i class="fab fa-github"></i> <!-- GitHub icon -->
+          <span class="tooltip">GitHub</span>
+      </a>
+      <a href="https://www.linkedin.com/in/charlie-lobe-72012954/" target="_blank" class="link">
+          <i class="fab fa-linkedin"></i> <!-- LinkedIn icon -->
+          <span class="tooltip">LinkedIn</span>
+      </a>
+      <a href="https://www.strava.com/athletes/39188092" target="_blank" class="link">
+          <i class="fab fa-strava"></i> <!-- Strava icon -->
+          <span class="tooltip">Strava</span>
+      </a>
+  <a href="https://www.duolingo.com/profile/CharlesLob17" target="_blank" class="link">
+          <i class="fab fa-duolingo"></i> <!-- Strava icon -->
+          <span class="tooltip">Duolingo</span>
+      </a>
+    </div>
+  </div>
+</div>

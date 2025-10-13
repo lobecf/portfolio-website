@@ -1,0 +1,94 @@
+.welcome-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr; 
+  align-items: center; 
+  height: 100vh; 
+  text-align: left; 
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.left-container {
+  display: flex;
+  flex-direction: column; 
+}
+
+.name {
+  font-size: 65px;
+}
+
+.description {
+  font-size: 17px;
+}
+
+.image-container {
+  width: 300px;
+  display: flex;
+  justify-content: center; 
+}
+
+.image-container img {
+  width: 300px; 
+  height: auto;
+}
+
+.rotating-text {
+  animation: fade-in-out 3s ease-in-out infinite alternate;
+}
+
+@keyframes fade-in-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.links {
+    display: block; /* Stack links vertically */
+    margin-left: auto; 
+    font-size: 25px; 
+}
+
+.link {
+    position: relative; 
+    padding-left: 10px; 
+    margin-left: 0; 
+    margin-bottom: 30px; 
+    transition: transform 0.3s ease; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+}
+
+.link:hover {
+    transform: translateX(-10px); 
+}
+
+.tooltip {
+    visibility: hidden; 
+    color: black; 
+    text-align: center; 
+    position: absolute; 
+    z-index: 1;
+    left: 110%; 
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+    font-size: 12px; 
+}
+
+.link:hover .tooltip {
+    visibility: visible; 
+    opacity: 1; 
+}
+
+.dark-mode .link {
+    color: white; 
+}
+
+.dark-mode .tooltip {
+    color: white; 
+}

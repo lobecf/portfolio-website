@@ -25,6 +25,8 @@ import { ToastrModule } from 'ngx-toastr';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
+import { ContentWrapperComponent } from './content-wrapper/content-wrapper.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,9 @@ import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
     ProjectProject1ContentComponent,
     ProjectProject2ContentComponent,
     ProjectProject3ContentComponent,
-    ImageModalComponent
+    ImageModalComponent,
+    ContentWrapperComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,

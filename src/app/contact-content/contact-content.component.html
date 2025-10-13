@@ -1,37 +1,39 @@
-<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-  <div>
-    <label for="firstName">First Name:</label>
-    <input id="firstName" formControlName="firstName" required />
-    <div *ngIf="contactForm.get('firstName')!.invalid && contactForm.get('firstName')!.touched">
-      First name is required.
-    </div>
-  </div>
+<div class="content">
+    <div class="form-wrapper">
+        <h3 class="header">Send me a message</h3>
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+          <div>
+            <label for="firstName">First Name:</label>
+            <input id="firstName" formControlName="firstName" required />
+            <div *ngIf="contactForm.get('firstName')!.invalid && contactForm.get('firstName')!.touched">
+              First name is required.
+            </div>
+          </div>
+          <div>
+            <label for="lastName">Last Name:</label>
+            <input id="lastName" formControlName="lastName" required />
+            <div *ngIf="contactForm.get('lastName')!.invalid && contactForm.get('lastName')!.touched">
+              Last name is required.
+            </div>
+          </div>
+          <div>
+            <label for="userEmail">Email:</label>
+            <input id="userEmail" formControlName="userEmail" required />
+            <div *ngIf="contactForm.get('userEmail')!.invalid && contactForm.get('userEmail')!.touched">
+              <div *ngIf="contactForm.get('userEmail')!.errors?.['required']">Email is required.</div>
+              <div *ngIf="contactForm.get('userEmail')!.errors?.['email']">Email is not valid.</div>
+            </div>
+          </div>
+          <div>
+            <label for="messageContent">Message:</label>
+            <textarea id="messageContent" formControlName="messageContent" required></textarea>
+            <div *ngIf="contactForm.get('messageContent')!.invalid && contactForm.get('messageContent')!.touched">
+              <div *ngIf="contactForm.get('messageContent')!.errors?.['required']">Message is required.</div>
+              <div *ngIf="contactForm.get('messageContent')!.errors?.['maxlength']">Message cannot exceed 200 characters.</div>
+            </div>
+          </div>
 
-  <div>
-    <label for="lastName">Last Name:</label>
-    <input id="lastName" formControlName="lastName" required />
-    <div *ngIf="contactForm.get('lastName')!.invalid && contactForm.get('lastName')!.touched">
-      Last name is required.
+        <button type="submit" [disabled]="contactForm.invalid">Send Email</button>
+      </form>
     </div>
-  </div>
-
-  <div>
-    <label for="userEmail">Email:</label>
-    <input id="userEmail" formControlName="userEmail" required />
-    <div *ngIf="contactForm.get('userEmail')!.invalid && contactForm.get('userEmail')!.touched">
-      <div *ngIf="contactForm.get('userEmail')!.errors?.['required']">Email is required.</div>
-      <div *ngIf="contactForm.get('userEmail')!.errors?.['email']">Email is not valid.</div>
-    </div>
-  </div>
-
-  <div>
-    <label for="messageContent">Message:</label>
-    <textarea id="messageContent" formControlName="messageContent" required></textarea>
-    <div *ngIf="contactForm.get('messageContent')!.invalid && contactForm.get('messageContent')!.touched">
-      <div *ngIf="contactForm.get('messageContent')!.errors?.['required']">Message is required.</div>
-      <div *ngIf="contactForm.get('messageContent')!.errors?.['maxlength']">Message cannot exceed 200 characters.</div>
-    </div>
-  </div>
-
-  <button type="submit" [disabled]="contactForm.invalid">Send Email</button>
-</form>
+</div>
