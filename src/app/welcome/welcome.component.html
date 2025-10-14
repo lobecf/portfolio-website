@@ -7,29 +7,29 @@
       <h2 class="description">Technology professional with expertise in Java, Terraform, Typescript, and CSS</h2>
     </div>
     <div class="nav-buttons">
-      <button (click)="intro()">About</button>
-      <button (click)="projects()">Projects</button>
-      <button (click)="resume()">Resume</button>
-      <button (click)="contact()">Contact</button>
+      <button class="nav-button" (click)="intro()">about</button>
+      <button class="nav-button" (click)="projects()">projects</button>
+      <button class="nav-button" (click)="resume()">resume</button>
+      <button class="nav-button" (click)="contact()">contact</button>
     </div>
   </div>
   <div class="image-container">
     <img src="assets/IMG_4220.jpg">
     <div class="links" [ngClass]="{ 'dark-mode': darkModeService.darkModeEnabled }">
       <a href="https://github.com/lobecf" target="_blank" class="link">
-          <i class="fab fa-github"></i> <!-- GitHub icon -->
+          <i class="fab fa-github"></i> 
           <span class="tooltip">GitHub</span>
       </a>
       <a href="https://www.linkedin.com/in/charlie-lobe-72012954/" target="_blank" class="link">
-          <i class="fab fa-linkedin"></i> <!-- LinkedIn icon -->
+          <i class="fab fa-linkedin"></i> 
           <span class="tooltip">LinkedIn</span>
       </a>
       <a href="https://www.strava.com/athletes/39188092" target="_blank" class="link">
-          <i class="fab fa-strava"></i> <!-- Strava icon -->
+          <i class="fab fa-strava"></i> 
           <span class="tooltip">Strava</span>
       </a>
   <a href="https://www.duolingo.com/profile/CharlesLob17" target="_blank" class="link">
-          <i class="fab fa-duolingo"></i> <!-- Strava icon -->
+          <i class="fab fa-duolingo"></i> 
           <span class="tooltip">Duolingo</span>
       </a>
     </div>
