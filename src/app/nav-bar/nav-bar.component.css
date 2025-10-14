@@ -3,6 +3,7 @@
 padding-right: 50px;
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 text-align: right;
+width: 100px;
 }
 
 .about-wrapper {
@@ -15,33 +16,35 @@ text-align: right;
     margin-bottom: 0;
     font-weight: bold;
     font-size: 25px;
+    color: rgb(165, 165, 165);
+    transition: color 0.2s ease;
 }
 
 .link:hover {
-    cursor:pointer;
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
+    color: black;
+    cursor: pointer;
 }
 
 .selected {
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
+    color: black;
+    cursor: pointer;
     }
 
 .link-subject {
+    font-weight: 550;
     margin: 5px;
-    color: gray;
+    color: rgb(165, 165, 165);
+    transition: color 0.2s ease;
 }
 
 .link-subject:hover {
-    cursor:pointer;
+    cursor: pointer;
     color: black;
 }
 
 .selected-link {
     display: block;
     color: black;
-    text-shadow: 0 0 .5px black;
     }
 
 .dark-mode .selected-link {

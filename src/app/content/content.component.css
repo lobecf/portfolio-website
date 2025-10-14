@@ -1,8 +1,8 @@
 .content-wrapper {
     background-color: #f2f2f2; /* Grey background color */
     padding: 20px;
-    width: 800px; /* Set the width of the content */
-    height: 400px; /* Set the height of the content */
+    width: 70vw; /* Set the width of the content */
+    height: 30vw; /* Set the height of the content */
     overflow-y: scroll;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
