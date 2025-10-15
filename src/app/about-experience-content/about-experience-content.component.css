@@ -1,22 +1,37 @@
-.company {
+.wrapper {
+    display: flex; 
+    width: 100%; /* Make sure it uses the full width */
+}
+
+.header {
+    font-size: 18px;
     margin-top: 0;
     margin-bottom: 8px;
     font-weight: bold;
 }
 
-.title-wrapper {
-    display:inline-block
+.content {
+    background-color: rgb(203, 203, 203);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start; 
+    padding: 20px; 
+    margin-right: 20px; 
+    flex: 1; /* Take equal remaining space */
 }
 
-.sub-title {
-    float: left;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-right: 30px;
-    margin-bottom: 8px
+.content-second {
+    display: flex;
+    flex-direction: column; 
+    background-color: rgb(203, 203, 203); 
+    border-radius: 15px;
+    padding: 20px; /* Combined padding for top, left, and bottom */
+    margin-bottom: 20px; /* Space between stacked items */
 }
 
-.list {
-    margin-top: 0;
-    margin-bottom: 30px;
+.content-second-wrapper {
+    flex: 1; /* Allow this column to grow equally */
+    display: flex;
+    flex-direction: column; /* Stack content-second divs */
 }

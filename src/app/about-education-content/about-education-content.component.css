@@ -1,14 +1,26 @@
-.header {
-    margin-top: 0;
-    margin-bottom: 8px;
-    font-weight: bold;
-}
-
-.degree {
-    margin-top: 8px;
-    margin-bottom: 8px;
+.container {
+    display: flex; 
+    justify-content: space-between; /* Keeps the wrappers at each end */
 }
 
 .wrapper {
-    margin-bottom: 30px;
+    flex: 0 1 calc(50% - 10px); /* Adjust width to allow space between */
+    box-sizing: border-box; 
+    padding: 20px; 
+    background-color: rgb(203, 203, 203);
+    border-radius: 15px;
+    margin-right: 20px; /* Space between columns */
+}
+
+.wrapper:last-child {
+    margin-right: 0; /* Removes right margin from the last wrapper */
+}
+
+.header {
+    margin: 0 0 8px 0;
+    font-weight: bold; 
+}
+
+.degree {
+    margin: 8px 0; 
 }

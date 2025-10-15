@@ -1,0 +1,23 @@
+footer {
+  position: fixed; /* Make the footer fixed */
+  left: 0;        /* Align to the left */
+  bottom: 0;      /* Align to the bottom of the viewport */
+  width: 100%;    /* Ensure it spans the full width */
+  color: white;   /* Text color */
+  margin: 25px; /* Center align text *//* Padding for the footer */
+  z-index: 1000;  /* Ensure it stays on top */
+}
+
+.mode-toggle button {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.mode-toggle button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+

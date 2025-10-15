@@ -1,8 +1,5 @@
-.skill-wrapper {
-    margin-bottom: 30px;
-}
-
 .header {
+    font-size: 18px;
     margin-top: 0;
     margin-bottom: 8px;
     font-weight: bold;
@@ -11,4 +8,16 @@
 .skill {
     margin-top: 0;
     margin-bottom: 8px;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px; /* Space between the tiles */
+}
+
+.skill-wrapper {
+    background-color: rgb(203, 203, 203); 
+    border-radius: 15px; /* Optional: rounded corners */
+    padding: 20px; /* Optional: padding for the content */
 }

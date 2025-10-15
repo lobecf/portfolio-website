@@ -27,6 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
 import { ContentWrapperComponent } from './content-wrapper/content-wrapper.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { WelcomeComponent } from './welcome/welcome.component';
     ProjectProject3ContentComponent,
     ImageModalComponent,
     ContentWrapperComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
